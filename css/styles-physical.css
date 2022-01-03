@@ -1,0 +1,185 @@
+:root { /*Cuando root se pone como pseudoclase, tiene mayor peso que etiqueta html*/
+    font-size:  62.5%;
+    --color-font:#212112;
+    --color-header:#616161;
+    --color-footer: #212429;
+    --color-subs: #424242;
+    --color-button: #000000;
+}
+
+
+body {
+   color: var(--color-font);
+
+  font-family: 'Roboto';
+  margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    width: 902px;
+    margin: auto;
+}
+a {
+    color: var(--color-font);
+ }
+
+.header-content {
+     position: relative;
+ }
+
+ .header {
+     position: sticky;
+     top: 0;
+ }
+header {
+    /*--color-header:blue; se puede cambiar la variable dentro del selector*/ 
+    font-size: 1.4rem;
+    color: var(--color-header);
+    position: absolute;
+    top: 64px;
+    left: -232px;
+    width: 188px;
+
+}
+
+header li {
+    margin-bottom: 16px;
+}
+
+header a {
+    color:var(--color-header);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: var(--color-font);
+}
+
+nav details summary {
+    font-weight: bold;
+    line-height: 24px;
+}
+
+h1 {
+    font-size: 6rem;
+  /*  margin-top: 64px;
+    margin-bottom: 16px;*/
+    margin: 64px 0 16px; /* top right bottom left */
+    font-weight: normal;
+  
+}
+
+/*h1 ~ p {
+    margin-bottom: 64px;
+}*/
+
+h2 {
+    font-size: 3.2rem;
+    margin: 64px 0 40px;
+    font-weight: normal;
+}
+
+hr {
+     margin: 64px 0 ;
+}
+
+h3 {
+    font-size: 2.4rem;
+    margin: 16px 0 24px 0;
+    font-weight: normal;
+    position: sticky;
+    top: 0;
+    background: white;
+    
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+pre {
+    background: #FEC62E;
+    padding: 40px;
+    font-size: 1.6rem;
+    font-family: 'Roboto';
+}
+
+blockquote {
+    margin: 32px 0;
+    font-size: 2.4rem;
+    padding-left: 16px;
+    line-height: 24px;
+    border-left: 4px solid var(--color-font);
+}
+
+blockquote span {
+    color: var(--color-header);
+}
+
+blockquote span::before {
+    content: '-';
+}
+
+blockquote p {
+    font-size: 2.4rem;
+}
+
+.hero {
+    height:350px;
+    background-image: linear-gradient(to top, rgba(255,255,255,0.3) , transparent), url('../images/patron-header.png');
+   /* background-position: center;
+    background-size: cover;*/
+    
+}
+
+.section-content + hr {
+    display: none;
+}
+
+.section-content:first-of-type {
+    margin: 0;
+}
+.section-content {
+    counter-reset: titleList;
+    margin-top:164px;
+}
+
+.section-content ol li {
+    font-size: 1.6rem;
+}
+.section-content ul li {
+  
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+}
+
+.section-content img {
+    margin-top: 40px;
+}
+.section-content h3 {
+    counter-increment: titleList;
+    padding-bottom: 8px;
+}
+.section-content h3::before {
+    content: counter(titleList, decimal) ". ";
+}
+
+.section-content h3::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: var(--color-font);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+::selection {
+    background: blueviolet;
+}

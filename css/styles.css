@@ -1,0 +1,116 @@
+/*@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+} */
+:root { /*Cuando root se pone como pseudoclase, tiene mayor peso que etiqueta html*/
+    font-size:  62.5%;
+    --color-font:#212112;
+    --color-header:#616161;
+    --color-footer: #212429;
+    --color-subs: #424242;
+    --color-button: #000000;
+}
+
+
+body {
+   color: var(--color-font);
+  /* font-family: charter;*/
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: var(--color-font);
+ }
+
+header {
+    /*--color-header:blue; se puede cambiar la variable dentro del selector*/ 
+    font-size: 1.4rem;
+    color: var(--color-header);
+}
+
+header a {
+    color:var(--color-header);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: var(--color-font);
+}
+
+nav details summary {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+    
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+pre {
+    background: #FEC62E;
+}
+
+.hero {
+    height:350px;
+    background-image: linear-gradient(to top, rgba(255,255,255,0.3) , transparent), url('../images/patron-header.png');
+   /* background-position: center;
+    background-size: cover;*/
+    
+}
+
+.section-content {
+    counter-reset: titleList;
+}
+
+.section-content h3 {
+    counter-increment: titleList;
+}
+.section-content h3::before {
+    content: counter(titleList, decimal) ". ";
+}
+
+.section-content h3::after {
+    content: '';
+    width: 32px;
+    height: 4px;
+    background: var(--color-font);
+    display: inline-block;
+}
+
+::selection {
+    background: blueviolet;
+}
