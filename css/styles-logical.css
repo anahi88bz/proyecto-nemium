@@ -1,0 +1,197 @@
+:root { /*Cuando root se pone como pseudoclase, tiene mayor peso que etiqueta html*/
+    font-size:  62.5%;
+    --color-font:white;
+    --color-header:#a5a3a5;
+    --color-footer: #212429;
+    --color-subs: #424242;
+    --color-button: #000000;
+    --color-background: #251F24;
+}
+
+
+body {
+   color: var(--color-font);
+   font-family: 'Nunito', sans-serif;
+  margin: 0;
+ /* margin-block-end: 50px;*/
+  background: var(--color-background);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    max-inline-size: 902px;
+    margin:auto;
+}
+
+.main-content {
+    padding-inline: 16px;
+}
+a {
+    color: var(--color-font);
+ }
+
+.header-content {
+     position: relative;
+ }
+
+ .header {
+     position: sticky;
+     inset-block-start: 0;
+ }
+header {
+    /*--color-header:blue; se puede cambiar la variable dentro del selector*/ 
+    font-size: 1.4rem;
+    color: var(--color-font);
+    position: absolute;
+    /*top*/
+    inset-block-start: 64px;
+    /*left*/
+    inset-inline-start: -232px;
+    width: 188px;
+
+}
+
+header li {
+    margin-bottom: 16px;
+    color: var(--color-header);
+}
+
+header a {
+    color:var(--color-header);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: var(--color-font);
+}
+
+nav details summary {
+    font-weight: bold;
+    line-height: 24px;
+}
+
+h1 {
+    font-size: 6rem;
+  /*  margin-top: 64px;
+    margin-bottom: 16px;*/
+    margin: 64px 0 16px; /* top right bottom left */
+    font-weight: bold;
+  
+}
+
+/*h1 ~ p {
+    margin-bottom: 64px;
+}*/
+
+h2 {
+    font-size: 3.2rem;
+    margin: 64px 0 40px;
+    font-weight: bold;
+}
+
+hr {
+     margin-block: 40px;
+     border-color: rgba(97,97,97,0.2);
+}
+
+h3 {
+    font-size: 2.4rem;
+    margin: 16px 0 24px 0;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    background: var(--color-background);
+    
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+pre {
+    background: var(--color-subs);
+    padding: 40px;
+    font-size: 1.6rem;
+    font-family: 'Nunito', sans-serif;
+    overflow: auto;
+    border-radius: 8px;
+    border: 10px solid #26A0DA ; 
+    box-shadow: -10px 10px 0 0 #314755;
+    margin-block-end: 40px;
+}
+
+blockquote {
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    background: var(--color-subs);
+    font-size: 2.4rem;
+    padding-inline-end: 24px;
+    padding-inline-start: 24px;
+    padding-block-start: 24px;
+    padding-block-end: 24px;
+    line-height: 24px;
+    border-radius: 8px;
+}
+
+blockquote span {
+    color: var(--color-header);
+}
+
+blockquote span::before {
+    content: '-';
+}
+
+blockquote p {
+    font-size: 2.4rem;
+}
+
+.hero {
+    height:350px;
+    background-image: linear-gradient(96.07deg, #314755 30%, #26A0DA   100%) ;
+   /* background-position: center;
+    background-size: cover;*/
+    
+}
+
+.section-content + hr {
+    display: none;
+}
+
+.section-content:first-of-type {
+    margin: 0;
+}
+.section-content {
+    counter-reset: titleList;
+    margin-top:164px;
+}
+
+.section-content ol li {
+    font-size: 1.6rem;
+}
+.section-content ul li {
+  
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+}
+
+.section-content img {
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
+}
+.section-content h3 {
+    counter-increment: titleList;
+    padding-bottom: 8px;
+}
+.section-content h3::before {
+    content: counter(titleList, decimal) ". ";
+}
+
+
+::selection {
+    background: blueviolet;
+}
