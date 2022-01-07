@@ -11,7 +11,7 @@
 
 body {
    color: var(--color-font);
-   font-family: 'Nunito', sans-serif;
+   font-family: 'Montserrat', sans-serif;
   margin: 0;
  /* margin-block-end: 50px;*/
   background: var(--color-background);
@@ -77,7 +77,7 @@ h1 {
 
 h2 {
     font-size: 3.2rem;
-    margin: 64px 0 40px;
+    margin: 20px 0 16px;
     font-weight: bold;
 }
 
@@ -104,18 +104,18 @@ pre {
     background: var(--color-subs);
     padding: 40px;
     font-size: 1.6rem;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     overflow: auto;
     border-radius: 8px;
-    border: 10px solid #26A0DA ; 
-    box-shadow: -10px 10px 0 0 #314755;
+    border: 10px solid #D4939D ; 
+    box-shadow: -10px 10px 0 0 #eccfd2 ;
     margin-block-end: 40px;
 }
 
 blockquote {
     margin-block-start: 80px;
     margin-block-end: 63px;
-    background: var(--color-subs);
+    background: #D4939D ;
     font-size: 2.4rem;
     padding-inline-end: 24px;
     padding-inline-start: 24px;
@@ -125,8 +125,8 @@ blockquote {
     border-radius: 8px;
 }
 
-blockquote span {
-    color: var(--color-header);
+blockquote p, span {
+    color:  #232946;
 }
 
 blockquote span::before {
@@ -139,7 +139,7 @@ blockquote p {
 
 .hero {
     block-size:50px;
-    background-image: linear-gradient(96.07deg, #314755 30%, #26A0DA   100%) ;
+    background-image: linear-gradient(96.07deg, #eccfd2 30%, #D4939D  100%) ;
    /* background-position: center;
     background-size: cover;*/
     
@@ -222,6 +222,9 @@ blockquote p {
     margin-block-start: 10px;
 }
 
+.mailing {
+    color: #EEBBC3;
+}
 .form input {
     inline-size: 100%;
     box-sizing: border-box;
@@ -237,10 +240,39 @@ blockquote p {
 }
 
 .form input[type="submit"] {
-    background: #157EFB;
-    color: white;
+    background: #EEBBC3;
+    color: #232946;
     border: none;
 }
+
+footer {
+    background: #EEBBC3;
+    height: 174px;
+    position: relative;
+    color: #232946;
+}
+
+footer div {
+    width: 100%;
+    position: absolute;
+ 
+}
+footer h2 {
+   text-align: center;
+}
+
+.icon-content {
+    text-align: center;
+
+}
+
+.icon-content img {
+    margin-block-start: 20px;
+    margin-inline-start: 20px;
+    height: 18px;
+    width: 18px;
+}
+
 
 @media screen and (min-width:1366px){
 
