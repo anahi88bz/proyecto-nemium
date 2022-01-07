@@ -29,31 +29,16 @@ html {
 .main-content {
     padding-inline: 16px;
 }
-a {
-    color: var(--color-font);
- }
-
-.header-content {
-     position: relative;
- }
-
- .header {
-     position: sticky;
-     inset-block-start: 0;
- }
 header {
     /*--color-header:blue; se puede cambiar la variable dentro del selector*/ 
     font-size: 1.4rem;
     color: var(--color-font);
-    position: absolute;
-    /*top*/
-    inset-block-start: 64px;
-    /*left*/
-    inset-inline-start: -232px;
-    width: 188px;
-
+    margin-block-start: 20px;
 }
 
+.header-content {
+    padding-inline: 20px;
+}
 header li {
     margin-bottom: 16px;
     color: var(--color-header);
@@ -68,16 +53,20 @@ header a:hover{
     color: var(--color-font);
 }
 
+a {
+    color: var(--color-font);
+ }
+
 nav details summary {
     font-weight: bold;
     line-height: 24px;
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 4rem;
   /*  margin-top: 64px;
     margin-bottom: 16px;*/
-    margin: 64px 0 16px; /* top right bottom left */
+    margin: 20px 0 16px; /* top right bottom left */
     font-weight: bold;
   
 }
@@ -149,7 +138,7 @@ blockquote p {
 }
 
 .hero {
-    height:350px;
+    block-size:50px;
     background-image: linear-gradient(96.07deg, #314755 30%, #26A0DA   100%) ;
    /* background-position: center;
     background-size: cover;*/
@@ -193,5 +182,95 @@ blockquote p {
 
 
 ::selection {
-    background: blueviolet;
+    background: #26A0DA ;
+}
+
+.slider-container {
+   /* block-size: 100px;*/
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.video {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet {
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background: var(--color-subs);
+    border-radius: 50%;
+}
+
+.slider-bullet:hover{
+    background: white;
+}
+
+.slider-bullet::selection{
+    background: white;
+}
+.slider-bullet-list {
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.form input {
+    inline-size: 100%;
+    box-sizing: border-box;
+    border: 2px solid white; 
+    border-radius: 4px;
+    background: var(--color-background);
+    color: white;
+    padding-inline: 16px;
+    padding-block: 12px;
+    font-size: 1.6rem;
+    display: block;
+    margin-block-end: 24px;
+}
+
+.form input[type="submit"] {
+    background: #157EFB;
+    color: white;
+    border: none;
+}
+
+@media screen and (min-width:1366px){
+
+    .header-content {
+        position: relative;
+        padding-inline:0;
+    }
+   
+    .header {
+        position: sticky;
+        inset-block-start: 0;
+    }
+   header {
+       
+       position: absolute;
+       /*top*/
+       inset-block-start: 64px;
+       /*left*/
+       inset-inline-start: -232px;
+       width: 188px;
+   
+   }
+   
+   .hero {
+    block-size:350px;
+   }
+
+   h1 {
+       font-size: 6rem;
+       margin-block-start: 64px;
+       
+   }
 }
